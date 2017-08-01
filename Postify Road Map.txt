@@ -1,0 +1,19 @@
+Postify based on AFDownloader : inspiration by octosuite
+------------------------------
+
+Features :
+- List like pages
+- List videos
+- User can download video
+- User can favourite page - use realm
+- User can repost the video into the page
+- Force update using harpy
+- Ads by chartboost
+- Use FB analytics
+
+
+
+
+Custom control : 
+- Download progress bar
+
