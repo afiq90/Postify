@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AD9714821F3025AA00BA70FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9714811F3025AA00BA70FC /* AppDelegate.swift */; };
+		AD9714841F3025AA00BA70FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9714831F3025AA00BA70FC /* ViewController.swift */; };
+		AD9714871F3025AA00BA70FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9714851F3025AA00BA70FC /* Main.storyboard */; };
+		AD97148A1F3025AA00BA70FC /* Postify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD9714881F3025AA00BA70FC /* Postify.xcdatamodeld */; };
+		AD97148C1F3025AA00BA70FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD97148B1F3025AA00BA70FC /* Assets.xcassets */; };
+		AD97148F1F3025AA00BA70FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD97148D1F3025AA00BA70FC /* LaunchScreen.storyboard */; };
+		AD97149A1F3025AB00BA70FC /* PostifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9714991F3025AB00BA70FC /* PostifyTests.swift */; };
+		AD9714A51F3025AB00BA70FC /* PostifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9714A41F3025AB00BA70FC /* PostifyUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AD9714961F3025AB00BA70FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD9714761F3025AA00BA70FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD97147D1F3025AA00BA70FC;
+			remoteInfo = Postify;
+		};
+		AD9714A11F3025AB00BA70FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD9714761F3025AA00BA70FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD97147D1F3025AA00BA70FC;
+			remoteInfo = Postify;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AD97147E1F3025AA00BA70FC /* Postify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Postify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD9714811F3025AA00BA70FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AD9714831F3025AA00BA70FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD9714861F3025AA00BA70FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AD9714891F3025AA00BA70FC /* Postify.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Postify.xcdatamodel; sourceTree = "<group>"; };
+		AD97148B1F3025AA00BA70FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AD97148E1F3025AA00BA70FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AD9714901F3025AA00BA70FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD9714951F3025AB00BA70FC /* PostifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD9714991F3025AB00BA70FC /* PostifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostifyTests.swift; sourceTree = "<group>"; };
+		AD97149B1F3025AB00BA70FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD9714A01F3025AB00BA70FC /* PostifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD9714A41F3025AB00BA70FC /* PostifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostifyUITests.swift; sourceTree = "<group>"; };
+		AD9714A61F3025AB00BA70FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AD97147B1F3025AA00BA70FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD9714921F3025AB00BA70FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD97149D1F3025AB00BA70FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AD9714751F3025AA00BA70FC = {
+			isa = PBXGroup;
+			children = (
+				AD9714801F3025AA00BA70FC /* Postify */,
+				AD9714981F3025AB00BA70FC /* PostifyTests */,
+				AD9714A31F3025AB00BA70FC /* PostifyUITests */,
+				AD97147F1F3025AA00BA70FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AD97147F1F3025AA00BA70FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AD97147E1F3025AA00BA70FC /* Postify.app */,
+				AD9714951F3025AB00BA70FC /* PostifyTests.xctest */,
+				AD9714A01F3025AB00BA70FC /* PostifyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD9714801F3025AA00BA70FC /* Postify */ = {
+			isa = PBXGroup;
+			children = (
+				AD9714811F3025AA00BA70FC /* AppDelegate.swift */,
+				AD9714831F3025AA00BA70FC /* ViewController.swift */,
+				AD9714851F3025AA00BA70FC /* Main.storyboard */,
+				AD97148B1F3025AA00BA70FC /* Assets.xcassets */,
+				AD97148D1F3025AA00BA70FC /* LaunchScreen.storyboard */,
+				AD9714901F3025AA00BA70FC /* Info.plist */,
+				AD9714881F3025AA00BA70FC /* Postify.xcdatamodeld */,
+			);
+			path = Postify;
+			sourceTree = "<group>";
+		};
+		AD9714981F3025AB00BA70FC /* PostifyTests */ = {
+			isa = PBXGroup;
+			children = (
+				AD9714991F3025AB00BA70FC /* PostifyTests.swift */,
+				AD97149B1F3025AB00BA70FC /* Info.plist */,
+			);
+			path = PostifyTests;
+			sourceTree = "<group>";
+		};
+		AD9714A31F3025AB00BA70FC /* PostifyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AD9714A41F3025AB00BA70FC /* PostifyUITests.swift */,
+				AD9714A61F3025AB00BA70FC /* Info.plist */,
+			);
+			path = PostifyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AD97147D1F3025AA00BA70FC /* Postify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD9714A91F3025AB00BA70FC /* Build configuration list for PBXNativeTarget "Postify" */;
+			buildPhases = (
+				AD97147A1F3025AA00BA70FC /* Sources */,
+				AD97147B1F3025AA00BA70FC /* Frameworks */,
+				AD97147C1F3025AA00BA70FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Postify;
+			productName = Postify;
+			productReference = AD97147E1F3025AA00BA70FC /* Postify.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AD9714941F3025AB00BA70FC /* PostifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD9714AC1F3025AB00BA70FC /* Build configuration list for PBXNativeTarget "PostifyTests" */;
+			buildPhases = (
+				AD9714911F3025AB00BA70FC /* Sources */,
+				AD9714921F3025AB00BA70FC /* Frameworks */,
+				AD9714931F3025AB00BA70FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD9714971F3025AB00BA70FC /* PBXTargetDependency */,
+			);
+			name = PostifyTests;
+			productName = PostifyTests;
+			productReference = AD9714951F3025AB00BA70FC /* PostifyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AD97149F1F3025AB00BA70FC /* PostifyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD9714AF1F3025AB00BA70FC /* Build configuration list for PBXNativeTarget "PostifyUITests" */;
+			buildPhases = (
+				AD97149C1F3025AB00BA70FC /* Sources */,
+				AD97149D1F3025AB00BA70FC /* Frameworks */,
+				AD97149E1F3025AB00BA70FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD9714A21F3025AB00BA70FC /* PBXTargetDependency */,
+			);
+			name = PostifyUITests;
+			productName = PostifyUITests;
+			productReference = AD9714A01F3025AB00BA70FC /* PostifyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AD9714761F3025AA00BA70FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = Cliqers;
+				TargetAttributes = {
+					AD97147D1F3025AA00BA70FC = {
+						CreatedOnToolsVersion = 9.0;
+					};
+					AD9714941F3025AB00BA70FC = {
+						CreatedOnToolsVersion = 9.0;
+						TestTargetID = AD97147D1F3025AA00BA70FC;
+					};
+					AD97149F1F3025AB00BA70FC = {
+						CreatedOnToolsVersion = 9.0;
+						TestTargetID = AD97147D1F3025AA00BA70FC;
+					};
+				};
+			};
+			buildConfigurationList = AD9714791F3025AA00BA70FC /* Build configuration list for PBXProject "Postify" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AD9714751F3025AA00BA70FC;
+			productRefGroup = AD97147F1F3025AA00BA70FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AD97147D1F3025AA00BA70FC /* Postify */,
+				AD9714941F3025AB00BA70FC /* PostifyTests */,
+				AD97149F1F3025AB00BA70FC /* PostifyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AD97147C1F3025AA00BA70FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD97148F1F3025AA00BA70FC /* LaunchScreen.storyboard in Resources */,
+				AD97148C1F3025AA00BA70FC /* Assets.xcassets in Resources */,
+				AD9714871F3025AA00BA70FC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD9714931F3025AB00BA70FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD97149E1F3025AB00BA70FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AD97147A1F3025AA00BA70FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD97148A1F3025AA00BA70FC /* Postify.xcdatamodeld in Sources */,
+				AD9714841F3025AA00BA70FC /* ViewController.swift in Sources */,
+				AD9714821F3025AA00BA70FC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD9714911F3025AB00BA70FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD97149A1F3025AB00BA70FC /* PostifyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD97149C1F3025AB00BA70FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD9714A51F3025AB00BA70FC /* PostifyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AD9714971F3025AB00BA70FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD97147D1F3025AA00BA70FC /* Postify */;
+			targetProxy = AD9714961F3025AB00BA70FC /* PBXContainerItemProxy */;
+		};
+		AD9714A21F3025AB00BA70FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD97147D1F3025AA00BA70FC /* Postify */;
+			targetProxy = AD9714A11F3025AB00BA70FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AD9714851F3025AA00BA70FC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD9714861F3025AA00BA70FC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AD97148D1F3025AA00BA70FC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD97148E1F3025AA00BA70FC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AD9714A71F3025AB00BA70FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AD9714A81F3025AB00BA70FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AD9714AA1F3025AB00BA70FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QCPGP4ADDR;
+				INFOPLIST_FILE = Postify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cliqers.Postify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AD9714AB1F3025AB00BA70FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QCPGP4ADDR;
+				INFOPLIST_FILE = Postify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cliqers.Postify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AD9714AD1F3025AB00BA70FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = QCPGP4ADDR;
+				INFOPLIST_FILE = PostifyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cliqers.PostifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Postify.app/Postify";
+			};
+			name = Debug;
+		};
+		AD9714AE1F3025AB00BA70FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = QCPGP4ADDR;
+				INFOPLIST_FILE = PostifyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cliqers.PostifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Postify.app/Postify";
+			};
+			name = Release;
+		};
+		AD9714B01F3025AB00BA70FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = QCPGP4ADDR;
+				INFOPLIST_FILE = PostifyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cliqers.PostifyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Postify;
+			};
+			name = Debug;
+		};
+		AD9714B11F3025AB00BA70FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = QCPGP4ADDR;
+				INFOPLIST_FILE = PostifyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cliqers.PostifyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Postify;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AD9714791F3025AA00BA70FC /* Build configuration list for PBXProject "Postify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD9714A71F3025AB00BA70FC /* Debug */,
+				AD9714A81F3025AB00BA70FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD9714A91F3025AB00BA70FC /* Build configuration list for PBXNativeTarget "Postify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD9714AA1F3025AB00BA70FC /* Debug */,
+				AD9714AB1F3025AB00BA70FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AD9714AC1F3025AB00BA70FC /* Build configuration list for PBXNativeTarget "PostifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD9714AD1F3025AB00BA70FC /* Debug */,
+				AD9714AE1F3025AB00BA70FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AD9714AF1F3025AB00BA70FC /* Build configuration list for PBXNativeTarget "PostifyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD9714B01F3025AB00BA70FC /* Debug */,
+				AD9714B11F3025AB00BA70FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AD9714881F3025AA00BA70FC /* Postify.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AD9714891F3025AA00BA70FC /* Postify.xcdatamodel */,
+			);
+			currentVersion = AD9714891F3025AA00BA70FC /* Postify.xcdatamodel */;
+			path = Postify.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AD9714761F3025AA00BA70FC /* Project object */;
+}
