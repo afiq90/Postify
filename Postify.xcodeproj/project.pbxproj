@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03C6995D33855E15111EF4A2 /* Pods_Postify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A190F7BE1134EDA22445A7 /* Pods_Postify.framework */; };
+		30E27930F912753CF9473D6D /* Pods_PostifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C241544077F989E771180CF6 /* Pods_PostifyTests.framework */; };
+		42226AB41F330D2B00CF1265 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42226AB31F330D2B00CF1265 /* MainViewController.swift */; };
+		42B06B1E1F31C11400AB7A8A /* Facebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B06B1D1F31C11400AB7A8A /* Facebook.swift */; };
+		42B06B211F32FE1000AB7A8A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B06B201F32FE1000AB7A8A /* CardView.swift */; };
+		42B06B231F33001E00AB7A8A /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B06B221F33001E00AB7A8A /* MainTableViewCell.swift */; };
 		AD9714821F3025AA00BA70FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9714811F3025AA00BA70FC /* AppDelegate.swift */; };
 		AD9714841F3025AA00BA70FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9714831F3025AA00BA70FC /* ViewController.swift */; };
 		AD9714871F3025AA00BA70FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9714851F3025AA00BA70FC /* Main.storyboard */; };
@@ -15,6 +21,7 @@
 		AD97148F1F3025AA00BA70FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD97148D1F3025AA00BA70FC /* LaunchScreen.storyboard */; };
 		AD97149A1F3025AB00BA70FC /* PostifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9714991F3025AB00BA70FC /* PostifyTests.swift */; };
 		AD9714A51F3025AB00BA70FC /* PostifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9714A41F3025AB00BA70FC /* PostifyUITests.swift */; };
+		C1ED656C38F1B5D01FD53AC8 /* Pods_PostifyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C3DF0FAE7BAF7500EFD18F /* Pods_PostifyUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +42,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0125A69203618AF26103A347 /* Pods-PostifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostifyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PostifyTests/Pods-PostifyTests.release.xcconfig"; sourceTree = "<group>"; };
+		03A190F7BE1134EDA22445A7 /* Pods_Postify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Postify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		157FCC3E9858AFBB7F75AB28 /* Pods-Postify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Postify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Postify/Pods-Postify.debug.xcconfig"; sourceTree = "<group>"; };
+		3F279C0229843C32A220B5B7 /* Pods-Postify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Postify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Postify/Pods-Postify.release.xcconfig"; sourceTree = "<group>"; };
+		42226AB31F330D2B00CF1265 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		42B06B1C1F31B52200AB7A8A /* Postify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Postify.entitlements; sourceTree = "<group>"; };
+		42B06B1D1F31C11400AB7A8A /* Facebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facebook.swift; sourceTree = "<group>"; };
+		42B06B201F32FE1000AB7A8A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		42B06B221F33001E00AB7A8A /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		66C3DF0FAE7BAF7500EFD18F /* Pods_PostifyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostifyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD97147E1F3025AA00BA70FC /* Postify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Postify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9714811F3025AA00BA70FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD9714831F3025AA00BA70FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +66,10 @@
 		AD9714A01F3025AB00BA70FC /* PostifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9714A41F3025AB00BA70FC /* PostifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostifyUITests.swift; sourceTree = "<group>"; };
 		AD9714A61F3025AB00BA70FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B80CD09A76CB227FCCA137FD /* Pods-PostifyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostifyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PostifyUITests/Pods-PostifyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C241544077F989E771180CF6 /* Pods_PostifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4BE4F667B21FC076B7BF9E5 /* Pods-PostifyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostifyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PostifyUITests/Pods-PostifyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F3A9C9A8417CD12CB8A968C2 /* Pods-PostifyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostifyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PostifyTests/Pods-PostifyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03C6995D33855E15111EF4A2 /* Pods_Postify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30E27930F912753CF9473D6D /* Pods_PostifyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +93,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1ED656C38F1B5D01FD53AC8 /* Pods_PostifyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42226AB51F33122B00CF1265 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				42B06B1D1F31C11400AB7A8A /* Facebook.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		42226AB61F33124500CF1265 /* Custom UI */ = {
+			isa = PBXGroup;
+			children = (
+				42B06B201F32FE1000AB7A8A /* CardView.swift */,
+			);
+			path = "Custom UI";
+			sourceTree = "<group>";
+		};
+		A9257DC11616861334C0956A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				157FCC3E9858AFBB7F75AB28 /* Pods-Postify.debug.xcconfig */,
+				3F279C0229843C32A220B5B7 /* Pods-Postify.release.xcconfig */,
+				F3A9C9A8417CD12CB8A968C2 /* Pods-PostifyTests.debug.xcconfig */,
+				0125A69203618AF26103A347 /* Pods-PostifyTests.release.xcconfig */,
+				E4BE4F667B21FC076B7BF9E5 /* Pods-PostifyUITests.debug.xcconfig */,
+				B80CD09A76CB227FCCA137FD /* Pods-PostifyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AD9714751F3025AA00BA70FC = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +136,8 @@
 				AD9714981F3025AB00BA70FC /* PostifyTests */,
 				AD9714A31F3025AB00BA70FC /* PostifyUITests */,
 				AD97147F1F3025AA00BA70FC /* Products */,
+				A9257DC11616861334C0956A /* Pods */,
+				D38DFF78612FE61204A8DDAB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +154,14 @@
 		AD9714801F3025AA00BA70FC /* Postify */ = {
 			isa = PBXGroup;
 			children = (
+				42B06B1C1F31B52200AB7A8A /* Postify.entitlements */,
 				AD9714811F3025AA00BA70FC /* AppDelegate.swift */,
 				AD9714831F3025AA00BA70FC /* ViewController.swift */,
 				AD9714851F3025AA00BA70FC /* Main.storyboard */,
+				42226AB31F330D2B00CF1265 /* MainViewController.swift */,
+				42B06B221F33001E00AB7A8A /* MainTableViewCell.swift */,
+				42226AB61F33124500CF1265 /* Custom UI */,
+				42226AB51F33122B00CF1265 /* Model */,
 				AD97148B1F3025AA00BA70FC /* Assets.xcassets */,
 				AD97148D1F3025AA00BA70FC /* LaunchScreen.storyboard */,
 				AD9714901F3025AA00BA70FC /* Info.plist */,
@@ -128,6 +188,16 @@
 			path = PostifyUITests;
 			sourceTree = "<group>";
 		};
+		D38DFF78612FE61204A8DDAB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03A190F7BE1134EDA22445A7 /* Pods_Postify.framework */,
+				C241544077F989E771180CF6 /* Pods_PostifyTests.framework */,
+				66C3DF0FAE7BAF7500EFD18F /* Pods_PostifyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +205,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD9714A91F3025AB00BA70FC /* Build configuration list for PBXNativeTarget "Postify" */;
 			buildPhases = (
+				471AF236C33D15D23756722D /* [CP] Check Pods Manifest.lock */,
 				AD97147A1F3025AA00BA70FC /* Sources */,
 				AD97147B1F3025AA00BA70FC /* Frameworks */,
 				AD97147C1F3025AA00BA70FC /* Resources */,
+				9A25854461A50D38D483DBF2 /* [CP] Embed Pods Frameworks */,
+				8FCF33CD41A07383A9178368 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +225,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD9714AC1F3025AB00BA70FC /* Build configuration list for PBXNativeTarget "PostifyTests" */;
 			buildPhases = (
+				90346C07ED35BAB96A37FF58 /* [CP] Check Pods Manifest.lock */,
 				AD9714911F3025AB00BA70FC /* Sources */,
 				AD9714921F3025AB00BA70FC /* Frameworks */,
 				AD9714931F3025AB00BA70FC /* Resources */,
+				1A910F9514DB705520FED7D6 /* [CP] Embed Pods Frameworks */,
+				5C735E260A0D716CF928DC66 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +246,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD9714AF1F3025AB00BA70FC /* Build configuration list for PBXNativeTarget "PostifyUITests" */;
 			buildPhases = (
+				F1395402BC4D9140FB5241E9 /* [CP] Check Pods Manifest.lock */,
 				AD97149C1F3025AB00BA70FC /* Sources */,
 				AD97149D1F3025AB00BA70FC /* Frameworks */,
 				AD97149E1F3025AB00BA70FC /* Resources */,
+				A18CFE59CA7B637050EE8A36 /* [CP] Embed Pods Frameworks */,
+				91E96E4A44F886ED6C211230 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,6 +275,11 @@
 				TargetAttributes = {
 					AD97147D1F3025AA00BA70FC = {
 						CreatedOnToolsVersion = 9.0;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					AD9714941F3025AB00BA70FC = {
 						CreatedOnToolsVersion = 9.0;
@@ -254,6 +338,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1A910F9514DB705520FED7D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PostifyTests/Pods-PostifyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		471AF236C33D15D23756722D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5C735E260A0D716CF928DC66 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PostifyTests/Pods-PostifyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FCF33CD41A07383A9178368 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Postify/Pods-Postify-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90346C07ED35BAB96A37FF58 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		91E96E4A44F886ED6C211230 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PostifyUITests/Pods-PostifyUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A25854461A50D38D483DBF2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Postify/Pods-Postify-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A18CFE59CA7B637050EE8A36 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PostifyUITests/Pods-PostifyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1395402BC4D9140FB5241E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AD97147A1F3025AA00BA70FC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -261,7 +483,11 @@
 			files = (
 				AD97148A1F3025AA00BA70FC /* Postify.xcdatamodeld in Sources */,
 				AD9714841F3025AA00BA70FC /* ViewController.swift in Sources */,
+				42226AB41F330D2B00CF1265 /* MainViewController.swift in Sources */,
+				42B06B1E1F31C11400AB7A8A /* Facebook.swift in Sources */,
+				42B06B231F33001E00AB7A8A /* MainTableViewCell.swift in Sources */,
 				AD9714821F3025AA00BA70FC /* AppDelegate.swift in Sources */,
+				42B06B211F32FE1000AB7A8A /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,10 +647,13 @@
 		};
 		AD9714AA1F3025AB00BA70FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 157FCC3E9858AFBB7F75AB28 /* Pods-Postify.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = QCPGP4ADDR;
+				CODE_SIGN_ENTITLEMENTS = Postify/Postify.entitlements;
+				DEVELOPMENT_TEAM = P8TD5FLYMZ;
 				INFOPLIST_FILE = Postify/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cliqers.Postify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -435,10 +664,13 @@
 		};
 		AD9714AB1F3025AB00BA70FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F279C0229843C32A220B5B7 /* Pods-Postify.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = QCPGP4ADDR;
+				CODE_SIGN_ENTITLEMENTS = Postify/Postify.entitlements;
+				DEVELOPMENT_TEAM = P8TD5FLYMZ;
 				INFOPLIST_FILE = Postify/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cliqers.Postify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -449,6 +681,7 @@
 		};
 		AD9714AD1F3025AB00BA70FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3A9C9A8417CD12CB8A968C2 /* Pods-PostifyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -465,6 +698,7 @@
 		};
 		AD9714AE1F3025AB00BA70FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0125A69203618AF26103A347 /* Pods-PostifyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -481,6 +715,7 @@
 		};
 		AD9714B01F3025AB00BA70FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4BE4F667B21FC076B7BF9E5 /* Pods-PostifyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = QCPGP4ADDR;
@@ -496,6 +731,7 @@
 		};
 		AD9714B11F3025AB00BA70FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B80CD09A76CB227FCCA137FD /* Pods-PostifyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = QCPGP4ADDR;
@@ -528,6 +764,7 @@
 				AD9714AB1F3025AB00BA70FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD9714AC1F3025AB00BA70FC /* Build configuration list for PBXNativeTarget "PostifyTests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +773,7 @@
 				AD9714AE1F3025AB00BA70FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD9714AF1F3025AB00BA70FC /* Build configuration list for PBXNativeTarget "PostifyUITests" */ = {
 			isa = XCConfigurationList;
@@ -544,6 +782,7 @@
 				AD9714B11F3025AB00BA70FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
