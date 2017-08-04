@@ -10,11 +10,12 @@
 		03C6995D33855E15111EF4A2 /* Pods_Postify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A190F7BE1134EDA22445A7 /* Pods_Postify.framework */; };
 		30E27930F912753CF9473D6D /* Pods_PostifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C241544077F989E771180CF6 /* Pods_PostifyTests.framework */; };
 		42226AB41F330D2B00CF1265 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42226AB31F330D2B00CF1265 /* MainViewController.swift */; };
+		42268BC31F3423130015C235 /* PagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42268BC21F3423130015C235 /* PagesCell.xib */; };
+		42268BC51F34239B0015C235 /* PagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42268BC41F34239B0015C235 /* PagesCell.swift */; };
 		42B06B1E1F31C11400AB7A8A /* Facebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B06B1D1F31C11400AB7A8A /* Facebook.swift */; };
 		42B06B211F32FE1000AB7A8A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B06B201F32FE1000AB7A8A /* CardView.swift */; };
-		42B06B231F33001E00AB7A8A /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B06B221F33001E00AB7A8A /* MainTableViewCell.swift */; };
 		AD9714821F3025AA00BA70FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9714811F3025AA00BA70FC /* AppDelegate.swift */; };
-		AD9714841F3025AA00BA70FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9714831F3025AA00BA70FC /* ViewController.swift */; };
+		AD9714841F3025AA00BA70FC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9714831F3025AA00BA70FC /* LoginViewController.swift */; };
 		AD9714871F3025AA00BA70FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9714851F3025AA00BA70FC /* Main.storyboard */; };
 		AD97148A1F3025AA00BA70FC /* Postify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD9714881F3025AA00BA70FC /* Postify.xcdatamodeld */; };
 		AD97148C1F3025AA00BA70FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD97148B1F3025AA00BA70FC /* Assets.xcassets */; };
@@ -47,14 +48,15 @@
 		157FCC3E9858AFBB7F75AB28 /* Pods-Postify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Postify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Postify/Pods-Postify.debug.xcconfig"; sourceTree = "<group>"; };
 		3F279C0229843C32A220B5B7 /* Pods-Postify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Postify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Postify/Pods-Postify.release.xcconfig"; sourceTree = "<group>"; };
 		42226AB31F330D2B00CF1265 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		42268BC21F3423130015C235 /* PagesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PagesCell.xib; sourceTree = "<group>"; };
+		42268BC41F34239B0015C235 /* PagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesCell.swift; sourceTree = "<group>"; };
 		42B06B1C1F31B52200AB7A8A /* Postify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Postify.entitlements; sourceTree = "<group>"; };
 		42B06B1D1F31C11400AB7A8A /* Facebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facebook.swift; sourceTree = "<group>"; };
 		42B06B201F32FE1000AB7A8A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		42B06B221F33001E00AB7A8A /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		66C3DF0FAE7BAF7500EFD18F /* Pods_PostifyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostifyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD97147E1F3025AA00BA70FC /* Postify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Postify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9714811F3025AA00BA70FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AD9714831F3025AA00BA70FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD9714831F3025AA00BA70FC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AD9714861F3025AA00BA70FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD9714891F3025AA00BA70FC /* Postify.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Postify.xcdatamodel; sourceTree = "<group>"; };
 		AD97148B1F3025AA00BA70FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -156,10 +158,11 @@
 			children = (
 				42B06B1C1F31B52200AB7A8A /* Postify.entitlements */,
 				AD9714811F3025AA00BA70FC /* AppDelegate.swift */,
-				AD9714831F3025AA00BA70FC /* ViewController.swift */,
+				AD9714831F3025AA00BA70FC /* LoginViewController.swift */,
 				AD9714851F3025AA00BA70FC /* Main.storyboard */,
 				42226AB31F330D2B00CF1265 /* MainViewController.swift */,
-				42B06B221F33001E00AB7A8A /* MainTableViewCell.swift */,
+				42268BC21F3423130015C235 /* PagesCell.xib */,
+				42268BC41F34239B0015C235 /* PagesCell.swift */,
 				42226AB61F33124500CF1265 /* Custom UI */,
 				42226AB51F33122B00CF1265 /* Model */,
 				AD97148B1F3025AA00BA70FC /* Assets.xcassets */,
@@ -318,6 +321,7 @@
 			files = (
 				AD97148F1F3025AA00BA70FC /* LaunchScreen.storyboard in Resources */,
 				AD97148C1F3025AA00BA70FC /* Assets.xcassets in Resources */,
+				42268BC31F3423130015C235 /* PagesCell.xib in Resources */,
 				AD9714871F3025AA00BA70FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,10 +486,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD97148A1F3025AA00BA70FC /* Postify.xcdatamodeld in Sources */,
-				AD9714841F3025AA00BA70FC /* ViewController.swift in Sources */,
+				AD9714841F3025AA00BA70FC /* LoginViewController.swift in Sources */,
 				42226AB41F330D2B00CF1265 /* MainViewController.swift in Sources */,
+				42268BC51F34239B0015C235 /* PagesCell.swift in Sources */,
 				42B06B1E1F31C11400AB7A8A /* Facebook.swift in Sources */,
-				42B06B231F33001E00AB7A8A /* MainTableViewCell.swift in Sources */,
 				AD9714821F3025AA00BA70FC /* AppDelegate.swift in Sources */,
 				42B06B211F32FE1000AB7A8A /* CardView.swift in Sources */,
 			);

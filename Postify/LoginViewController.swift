@@ -10,7 +10,7 @@ import UIKit
 import FBSDKLoginKit
 import Dispatch
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: FBSDKLoginButtonDelegate {
+extension LoginViewController: FBSDKLoginButtonDelegate {
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         let defaults = UserDefaults.standard
