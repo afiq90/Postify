@@ -12,6 +12,7 @@
 		42226AB41F330D2B00CF1265 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42226AB31F330D2B00CF1265 /* MainViewController.swift */; };
 		42268BC31F3423130015C235 /* PagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42268BC21F3423130015C235 /* PagesCell.xib */; };
 		42268BC51F34239B0015C235 /* PagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42268BC41F34239B0015C235 /* PagesCell.swift */; };
+		42268BC71F342DEF0015C235 /* FBPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42268BC61F342DEF0015C235 /* FBPages.swift */; };
 		42B06B1E1F31C11400AB7A8A /* Facebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B06B1D1F31C11400AB7A8A /* Facebook.swift */; };
 		42B06B211F32FE1000AB7A8A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B06B201F32FE1000AB7A8A /* CardView.swift */; };
 		AD9714821F3025AA00BA70FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9714811F3025AA00BA70FC /* AppDelegate.swift */; };
@@ -50,6 +51,7 @@
 		42226AB31F330D2B00CF1265 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		42268BC21F3423130015C235 /* PagesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PagesCell.xib; sourceTree = "<group>"; };
 		42268BC41F34239B0015C235 /* PagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesCell.swift; sourceTree = "<group>"; };
+		42268BC61F342DEF0015C235 /* FBPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBPages.swift; sourceTree = "<group>"; };
 		42B06B1C1F31B52200AB7A8A /* Postify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Postify.entitlements; sourceTree = "<group>"; };
 		42B06B1D1F31C11400AB7A8A /* Facebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facebook.swift; sourceTree = "<group>"; };
 		42B06B201F32FE1000AB7A8A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				42226AB31F330D2B00CF1265 /* MainViewController.swift */,
 				42268BC21F3423130015C235 /* PagesCell.xib */,
 				42268BC41F34239B0015C235 /* PagesCell.swift */,
+				42268BC61F342DEF0015C235 /* FBPages.swift */,
 				42226AB61F33124500CF1265 /* Custom UI */,
 				42226AB51F33122B00CF1265 /* Model */,
 				AD97148B1F3025AA00BA70FC /* Assets.xcassets */,
@@ -485,6 +488,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42268BC71F342DEF0015C235 /* FBPages.swift in Sources */,
 				AD97148A1F3025AA00BA70FC /* Postify.xcdatamodeld in Sources */,
 				AD9714841F3025AA00BA70FC /* LoginViewController.swift in Sources */,
 				42226AB41F330D2B00CF1265 /* MainViewController.swift in Sources */,
