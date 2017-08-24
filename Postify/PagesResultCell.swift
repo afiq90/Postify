@@ -8,10 +8,11 @@
 
 import UIKit
 
-class PagesCell: UITableViewCell {
+class PagesResultCell: UITableViewCell {
     
     @IBOutlet weak var pagesAbout: UILabel!
     @IBOutlet weak var pagesName: UILabel!
+    @IBOutlet weak var pagesImage: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

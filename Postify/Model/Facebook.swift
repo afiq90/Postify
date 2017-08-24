@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import FBSDKLoginKit
 
-typealias likesCompletionHandler = (Dictionary<String, Any>) -> ()
+typealias completionHandler = (Dictionary<String, Any>) -> ()
 typealias failure = (Error?) -> ()
 
 
@@ -41,7 +41,7 @@ class Facebook: NSObject {
                                 profileImage.layer.cornerRadius = profileImage.frame.size.width / 2
                                 profileImage.layer.masksToBounds = true
                                 profileImage.layer.borderWidth = 3.0
-                                profileImage.layer.borderColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
+                                profileImage.layer.borderColor = #colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1).cgColor
                             }
                     }
                 }
@@ -52,8 +52,7 @@ class Facebook: NSObject {
     }
     }
     
-    //@{@"fields": @"about,name,created_time,picture",@"limit": @"50", @"after": currentPage}
-    class func getUserPagesLikes(params dict:Dictionary<String, Any>, handler completionBlock: @escaping likesCompletionHandler, failure: @escaping failure) {
+    class func getUserPagesLikes(params dict: Dictionary<String, Any>, handler completionBlock: @escaping completionHandler, failure: @escaping failure) {
         
         FBSDKGraphRequest(graphPath: "me/likes", parameters: dict, httpMethod: "GET").start { (connection, result, error) in
             if error == nil {
@@ -68,6 +67,26 @@ class Facebook: NSObject {
         }
         
     }
+    
+    class func getVideosFromPages(params dict: Dictionary<String, Any>, id: String, completionBlock: @escaping completionHandler, failure: @escaping failure) {
+        
+        let path = "\(id)/videos?"
+        FBSDKGraphRequest(graphPath: path, parameters: dict, httpMethod: "GET").start { (connection, result, error) in
+            DispatchQueue.main.async {
+                if error == nil {
+                    DispatchQueue.main.async {
+                        if let videos = result as? [String: Any] {
+                            completionBlock(videos)
+                        }
+                    }
+                } else {
+                    failure(error)
+                }
+            }
+        }
+    }
+    
+    //get video detail such as likes count, comment count....   graphPath need video id, created time,
     
     
 }

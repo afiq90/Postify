@@ -13,5 +13,7 @@ class FBPages: NSObject {
     
     var about = ""
     var name = ""
+    var id = ""
+    var pictureLink = ""
     
 }

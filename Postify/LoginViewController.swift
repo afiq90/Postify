@@ -19,10 +19,6 @@ class LoginViewController: UIViewController {
         if FBSDKAccessToken.current() != nil {
             //perform segue to mainVC
             performSegue(withIdentifier: "mainVC", sender: self)
-            
-//            let defaults = UserDefaults.standard
-//            defaults.set(FBSDKAccessToken.current().tokenString, forKey: "fbtoken")
-//            defaults.synchronize()
 
         } else {
             loginToFB()
@@ -32,13 +28,15 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        blurEffect()
     }
     
     func loginToFB() {
         let loginButton = FBSDKLoginButton()
         loginButton.delegate = self
         loginButton.center = view.center
-        loginButton.readPermissions = ["public_profile","email","user_friends","user_likes","manage_pages","publish_pages"]
+        loginButton.readPermissions = ["public_profile","email","user_friends","user_likes"]
+        //,"manage_pages","publish_pages" <-- need to access for write permissions
         view.addSubview(loginButton)
     }
     
@@ -49,6 +47,15 @@ class LoginViewController: UIViewController {
         if segue.identifier == "mainVC" {
             let mainVC = segue.destination as! MainViewController
         }
+    }
+    
+    func blurEffect() {
+        let blurEffect = UIBlurEffect(style: .dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.alpha = 0.8
+        blurEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.addSubview(blurEffectView)
     }
 
     

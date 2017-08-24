@@ -8,11 +8,12 @@
 
 import UIKit
 import Dispatch
+import SDWebImage
 
 class MainViewController: UIViewController {
     
     struct tableViewIdentifiers {
-        static let pagesCell = "PagesCell"
+        static let pagesCell = "PagesResultCell"
     }
     
     @IBOutlet weak var greetingLabel: UILabel!
@@ -28,11 +29,12 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: 0, right: 0)
         Facebook.getUserInfo(greetingLabel: greetingLabel, profileImage: profilePic)
         
         pages = []
         
-        let params = ["fields": "about,name,created_time,picture", "limit": "12"]
+        let params = ["fields": "about,name,created_time,picture", "limit": "5"]
         Facebook.getUserPagesLikes(params: params, handler: { (userData) in
             
             guard let pagesArrays = userData["data"] as? Array<Any> else {return}
@@ -40,12 +42,19 @@ class MainViewController: UIViewController {
             for dict in pagesArrays {
                 
                 let fbPages = FBPages()
-                let pagesData = dict as! NSDictionary
-                if let name = pagesData["name"] {
+                let pagesDict = dict as! NSDictionary
+                print("hoho: \(pagesDict)")
+                if let name = pagesDict["name"] {
                     fbPages.name = name as! String
                 }
-                if let about = pagesData["about"] {
+                if let about = pagesDict["about"] {
                     fbPages.about = about as! String
+                }
+                if let pageID = pagesDict["id"] {
+                    fbPages.id = pageID as! String
+                }
+                if let pagesPicture = pagesDict.value(forKeyPath: "picture.data.url") {
+                    fbPages.pictureLink = pagesPicture as! String
                 }
                 self.pages.append(fbPages)
                 
@@ -65,6 +74,19 @@ class MainViewController: UIViewController {
         tableView.register(cellnib, forCellReuseIdentifier: tableViewIdentifiers.pagesCell)
         tableView.rowHeight = 80
     
+        
+        print("access token: \(Facebook.currentFBAccessToken())")
+    }
+    
+    // MARK - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "pagesVC" {
+            let pagesVC = segue.destination as! PagesViewController
+            let defaults = UserDefaults.standard
+            let pageID = defaults.object(forKey: "pageID") as? String
+            pagesVC.pageIDValue = pageID!
+        }
     }
 
 }
@@ -76,14 +98,39 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: tableViewIdentifiers.pagesCell, for: indexPath) as! PagesCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: tableViewIdentifiers.pagesCell, for: indexPath) as! PagesResultCell
         
         let pagesData = pages[indexPath.row]
         cell.pagesName.text = pagesData.name
-        cell.pagesAbout.text = pagesData.about
+        cell.pagesAbout.text = pagesData.id
+        
+        let imageUrl = URL(string: pagesData.pictureLink)
+        cell.pagesImage.sd_setImage(with: imageUrl!, placeholderImage: UIImage(named: "placeholder"), options: .continueInBackground, progress: nil
+            , completed: nil)
 
         return cell
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        //save page ID into UserDefaults
+        let pagesData = pages[indexPath.row]
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(pagesData.id, forKey: "pageID")
+        userDefaults.synchronize()
+       
+        performSegue(withIdentifier: "pagesVC", sender: self)
+    
+    }
+    
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if pages.count == 0 {
+            return nil
+        } else {
+            return indexPath
+        }
     }
     
 }
