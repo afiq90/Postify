@@ -11,7 +11,7 @@ Features :
 - Ads by chartboost
 - Use FB analytics
 - News from developer (tiru mematic app)
-- Implement rate
+- Implement app rate
 
 
 

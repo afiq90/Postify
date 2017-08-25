@@ -12,6 +12,7 @@ import Dispatch
 
 class LoginViewController: UIViewController {
     
+    @IBOutlet weak var introLabel: UILabel!
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -45,7 +46,7 @@ class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "mainVC" {
-            let mainVC = segue.destination as! MainViewController
+            let mainVC = segue.destination as! MainVC
         }
     }
     
@@ -55,7 +56,7 @@ class LoginViewController: UIViewController {
         blurEffectView.alpha = 0.8
         blurEffectView.frame = view.bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        view.addSubview(blurEffectView)
+        view.insertSubview(blurEffectView, belowSubview: introLabel)
     }
 
     

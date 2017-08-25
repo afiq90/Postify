@@ -20,19 +20,22 @@ class PagesViewController: UIViewController {
         pageID.text = pageIDValue
         print("page id: \(pageIDValue)")
         
-        let params = ["fields": "description,source,thumbnails.limit(1)", "limit": "1"]
-        Facebook.getVideosFromPages(params: params, id: pageIDValue, completionBlock: { (result) in
-            print("videos from page: \(result)")
+//        let params = ["fields": "description,source,thumbnails.limit(1)", "limit": "1"]
+//        Facebook.getVideosFromPages(params: params, id: pageIDValue, completionBlock: { (result) in
+//            print("videos from page: \(result)")
+//        }) { (error) in
+//            print("error again")
+//        }
+        
+        let videoCountParams = ["fields": "shares,likes.limit(0).summary(true),comments.limit(0).summary(true)"]
+        Facebook.getTotalCountForVideos(params: videoCountParams, postID: "331481044571_1649904411699312", completionBlock: { (result) in
+            print("video total count: \(result)")
         }) { (error) in
-            print("error again")
+            print("hello error")
         }
 
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)

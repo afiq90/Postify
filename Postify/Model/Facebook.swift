@@ -86,7 +86,25 @@ class Facebook: NSObject {
         }
     }
     
-    //get video detail such as likes count, comment count....   graphPath need video id, created time,
     
+    
+    // get the likes, shared and comment count for video or post https://stackoverflow.com/questions/16358366/facebook-graph-api-comment-count/36997725#36997725
+    class func getTotalCountForVideos(params dict: Dictionary<String, Any>, postID: String, completionBlock: @escaping completionHandler, failure: @escaping failure) {
+       
+        let postIDPath = "\(postID)/"
+        FBSDKGraphRequest(graphPath: postIDPath, parameters: dict, httpMethod: "GET").start { (connection, result, error) in
+            DispatchQueue.main.async {
+                if error == nil {
+                    DispatchQueue.main.async {
+                        if let totalCount = result as? [String: Any] {
+                            completionBlock(totalCount)
+                        }
+                    }
+                } else {
+                    failure(error)
+                }
+            }
+        }
+    }
     
 }
