@@ -24,7 +24,7 @@ class MainVC: UITableViewController {
         
         pages = []
         
-        let params = ["fields": "about,name,created_time,picture", "limit": "10"]
+        let params = ["fields": "about,created_time,link,name,username,website,fan_count,picture", "limit": "10"]
         Facebook.getUserPagesLikes(params: params, handler: { (userData) in
             
             guard let pagesArrays = userData["data"] as? Array<Any> else {return}
@@ -44,6 +44,9 @@ class MainVC: UITableViewController {
                 }
                 if let pagesPicture = pagesDict.value(forKeyPath: "picture.data.url") {
                     fbPages.pictureLink = pagesPicture as! String
+                }
+                if let pagesFansTotalCount = pagesDict["fan_count"] {
+                    fbPages.pagesTotalFans = pagesFansTotalCount as! Int
                 }
                 self.pages.append(fbPages)
                 
@@ -72,7 +75,7 @@ class MainVC: UITableViewController {
         
         let pagesData = pages[indexPath.row]
         cell.pagesName.text = pagesData.name
-        cell.pagesAbout.text = pagesData.id
+        cell.pagesFans.text = "\(pagesData.pagesTotalFans)"
         
         let imageUrl = URL(string: pagesData.pictureLink)
         cell.pagesImage.sd_setImage(with: imageUrl!, placeholderImage: UIImage(named: "placeholder"), options: .continueInBackground, progress: nil

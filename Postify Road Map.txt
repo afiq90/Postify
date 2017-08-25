@@ -13,7 +13,7 @@ Features :
 - News from developer (tiru mematic app)
 - Implement app rate
 
-
+- get pages total like, use foldingcell
 
 Custom control : 
 - Download progress bar

@@ -102,7 +102,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         
         let pagesData = pages[indexPath.row]
         cell.pagesName.text = pagesData.name
-        cell.pagesAbout.text = pagesData.id
+       // cell.pagesFans.text = "pagesData.pagesTotalFans"
         
         let imageUrl = URL(string: pagesData.pictureLink)
         cell.pagesImage.sd_setImage(with: imageUrl!, placeholderImage: UIImage(named: "placeholder"), options: .continueInBackground, progress: nil

@@ -10,9 +10,11 @@ import UIKit
 
 class PagesResultCell: UITableViewCell {
     
-    @IBOutlet weak var pagesAbout: UILabel!
+    @IBOutlet weak var pagesFans: UILabel!
     @IBOutlet weak var pagesName: UILabel!
     @IBOutlet weak var pagesImage: UIImageView!
+    @IBOutlet weak var bgView: UIView!
+
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,4 +27,13 @@ class PagesResultCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    override func layoutSubviews() {
+        bgView.layer.cornerRadius = 15
+        bgView.layer.borderWidth = 1.0
+        bgView.layer.borderColor = #colorLiteral(red: 0.1529411765, green: 0.2745098039, blue: 0.5647058824, alpha: 1).cgColor
+        bgView.layer.masksToBounds = true
+        
+        pagesImage.layer.cornerRadius = pagesImage.bounds.size.width / 2.0
+        pagesImage.clipsToBounds = true
+    }
 }
