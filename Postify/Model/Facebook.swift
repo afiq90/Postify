@@ -89,6 +89,7 @@ class Facebook: NSObject {
     
     
     // get the likes, shared and comment count for video or post https://stackoverflow.com/questions/16358366/facebook-graph-api-comment-count/36997725#36997725
+    //put this function in cellforrow
     class func getTotalCountForVideos(params dict: Dictionary<String, Any>, postID: String, completionBlock: @escaping completionHandler, failure: @escaping failure) {
        
         let postIDPath = "\(postID)/"
@@ -106,5 +107,38 @@ class Facebook: NSObject {
             }
         }
     }
+    
+    //https://stackoverflow.com/questions/35611241/share-a-video-to-facebook
+    class func uploadVideoOnFacebook(videoURL: String) {
+        
+        // to upload from URL need to use url, if from video library need to use nsdata
+        
+        var pathURL: URL
+        var videoData: Data
+        pathURL = URL(string: videoURL)!
+        do {
+            videoData = try Data(contentsOf: pathURL)
+            print(videoData)
+            var strDesc : String
+            strDesc = ""
+            let videoObject: [String : Any] = ["access_token": "EAACBUZCMAGQMBAERyQvBUZBVKkokRZB69khOzwichN9oETNw4PfsC9GxqabnITuA6GuqY2NyOMiXpgD4x3dhZBldmwZAZB5ANqCRXsGoAzLRSGPkPIishPLgccPIco9Vnb4AZBWs01nbmVumI8LzlCbFSGaV8P7xQmUi55oazOvZAZB4oUICHdQKQ4emQo3FrHuVJX52ZAwALxYQZDZD", "title": "application Name", "description": strDesc, "file_url": pathURL]
+//            self.view!.isUserInteractionEnabled = false
+        
+            //for fb pages need to get page access token, personal acc don't need
+            
+            FBSDKGraphRequest(graphPath: "368382973321492/videos", parameters: videoObject, httpMethod: "POST").start(completionHandler: { (connection, result, error) in
+                if error != nil {
+                    NSLog("Error")
+                    
+                }
+                else {
+                    NSLog("Success")
+                }
+            })
+            } catch {
+            print(error)
+        }
+    }
+
     
 }

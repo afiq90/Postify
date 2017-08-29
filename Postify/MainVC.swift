@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Lottie
 
 class MainVC: UITableViewController {
     
@@ -15,16 +16,36 @@ class MainVC: UITableViewController {
     }
     
     var pages: [FBPages] = []
+    let animationView = LOTAnimationView(name: "loading.json")
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        tableView.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: 0, right: 0)
+        
+        //loading lottie animation start
+        animationView.frame = CGRect(x: 0, y: 0, width: 400, height: 400)
+        animationView.center = view.center
+        
+        animationView.loopAnimation = true
+        animationView.contentMode = .scaleAspectFill
+        animationView.animationSpeed = 0.5
+        
+        // Applying UIView animation
+        let minimizeTransform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        animationView.transform = minimizeTransform
+        UIView.animate(withDuration: 3.0, delay: 0.0, options: [.repeat, .autoreverse], animations: {
+            self.animationView.transform = CGAffineTransform.identity
+        }, completion: nil)
+        
+        view.addSubview(animationView)
+        
+        animationView.play()
+        
+        //tableView.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: 0, right: 0)
         
         pages = []
         
-        let params = ["fields": "about,created_time,link,name,username,website,fan_count,picture", "limit": "10"]
+        let params = ["fields": "about,created_time,link,name,username,website,fan_count,picture"]
         Facebook.getUserPagesLikes(params: params, handler: { (userData) in
             
             guard let pagesArrays = userData["data"] as? Array<Any> else {return}
@@ -53,6 +74,8 @@ class MainVC: UITableViewController {
             }
             
             DispatchQueue.main.async {
+                self.animationView.pause()
+                self.animationView.removeFromSuperview()
                 self.tableView.reloadData()
                 
             }
@@ -110,7 +133,7 @@ class MainVC: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "pagesVC" {
-            let pagesVC = segue.destination as! PagesViewController
+            let pagesVC = segue.destination as! PagesVC
             let defaults = UserDefaults.standard
             let pageID = defaults.object(forKey: "pageID") as? String
             pagesVC.pageIDValue = pageID!

@@ -6,12 +6,14 @@ Features :
 - List videos
 - User can download video
 - User can favourite page - use realm
+- New video from last load
 - User can repost the video into the page
 - Force update using harpy
 - Ads by chartboost
 - Use FB analytics
 - News from developer (tiru mematic app)
-- Implement app rate
+- Implement app rate\
+- MBProgresHUD
 
 - get pages total like, use foldingcell
 

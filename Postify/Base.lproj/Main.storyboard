@@ -92,11 +92,11 @@
                                                     <rect key="frame" x="156" y="80" width="178" height="35"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                                    <color key="textColor" red="0.96078431369999995" green="0.95294117649999999" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.95673602820000003" green="0.55136024949999995" blue="0.50002831219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.3411764705882353" green="0.42352941176470588" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.35967385768890381" green="0.19134232401847839" blue="0.34011363983154297" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </view>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hoF-a5-Xqx">
                                             <rect key="frame" x="8" y="20" width="94" height="95"/>
@@ -111,7 +111,7 @@
                                                 <constraint firstAttribute="height" constant="60" id="xII-ci-GNa"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
-                                            <color key="textColor" red="0.96078431372549022" green="0.95294117647058818" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="textColor" red="0.95673602819442749" green="0.55136024951934814" blue="0.50002831220626831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Like-48" translatesAutoresizingMaskIntoConstraints="NO" id="Z7g-q3-rva">
@@ -149,30 +149,110 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="14f-Uf-tYd" kind="presentation" identifier="pagesVC" id="bCI-Lp-1cQ"/>
+                        <segue destination="QkZ-Mh-zA6" kind="presentation" identifier="pagesVC" id="8Wq-wM-cM2"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SMk-fc-tdX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="965.60000000000002" y="139.880059970015"/>
         </scene>
-        <!--Table View Controller-->
+        <!--PagesVC-->
         <scene sceneID="b59-pO-p5W">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yg5-fD-oEs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="QkZ-Mh-zA6" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="303" sectionHeaderHeight="28" sectionFooterHeight="28" id="7Yk-wS-Cux">
+                <tableViewController id="QkZ-Mh-zA6" customClass="PagesVC" customModule="Postify" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="353" sectionHeaderHeight="28" sectionFooterHeight="28" id="7Yk-wS-Cux">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="cXz-Rb-OTQ">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Videos" id="ZyS-C8-t51">
+                                    <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="DKC-Ks-NZh">
+                                        <connections>
+                                            <action selector="backButton:" destination="QkZ-Mh-zA6" id="lbK-RV-B3Y"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="303" id="VWf-0m-OU4">
-                                <rect key="frame" x="0.0" y="28" width="375" height="303"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PagesCell" rowHeight="353" id="VWf-0m-OU4" customClass="PagesCell" customModule="Postify" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="353"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VWf-0m-OU4" id="xMC-Cq-5R0">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="302.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="352.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tqD-mW-poS">
+                                            <rect key="frame" x="8" y="22" width="359" height="308.5"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tBy-vm-zcO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="248"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSu-2U-RsG">
+                                                    <rect key="frame" x="139" y="84" width="80" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="Tx2-MZ-Im3"/>
+                                                        <constraint firstAttribute="height" constant="80" id="xLb-ZQ-lAF"/>
+                                                    </constraints>
+                                                    <state key="normal" image="playbutton"/>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Like-48" translatesAutoresizingMaskIntoConstraints="NO" id="yYl-7u-C0z">
+                                                    <rect key="frame" x="8" y="256" width="40" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="123123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxU-XA-wsJ">
+                                                    <rect key="frame" x="49" y="266" width="79" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" red="0.95673602820000003" green="0.55136024949999995" blue="0.50002831219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3a-R7-4ed">
+                                                    <rect key="frame" x="256" y="262" width="85" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Repost">
+                                                        <color key="titleColor" red="0.95673602820000003" green="0.55136024949999995" blue="0.50002831219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="repostButton:" destination="QkZ-Mh-zA6" eventType="touchUpInside" id="fck-FR-z0D"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="os3-vB-dj2">
+                                                    <rect key="frame" x="129" y="262" width="119" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                                    <state key="normal" title="Download">
+                                                        <color key="titleColor" red="0.95673602820000003" green="0.55136024949999995" blue="0.50002831219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="tBy-vm-zcO" firstAttribute="leading" secondItem="tqD-mW-poS" secondAttribute="leading" id="5AM-1t-sPp"/>
+                                                <constraint firstAttribute="trailing" secondItem="tBy-vm-zcO" secondAttribute="trailing" id="5mh-sP-fgE"/>
+                                                <constraint firstItem="mSu-2U-RsG" firstAttribute="top" secondItem="tBy-vm-zcO" secondAttribute="bottom" constant="-164" id="Kcp-t6-Xsk"/>
+                                                <constraint firstItem="tBy-vm-zcO" firstAttribute="top" secondItem="tqD-mW-poS" secondAttribute="top" id="OOt-IU-CRt"/>
+                                                <constraint firstItem="mSu-2U-RsG" firstAttribute="centerX" secondItem="tqD-mW-poS" secondAttribute="centerX" id="btu-OQ-4Uq"/>
+                                                <constraint firstAttribute="bottom" secondItem="tBy-vm-zcO" secondAttribute="bottom" constant="60.5" id="rFh-qG-Jhc"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.35967385769999999" green="0.19134232400000001" blue="0.34011363979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="tqD-mW-poS" firstAttribute="top" secondItem="xMC-Cq-5R0" secondAttribute="top" constant="22" id="cn6-mN-g8t"/>
+                                        <constraint firstAttribute="bottom" secondItem="tqD-mW-poS" secondAttribute="bottom" constant="22" id="cqQ-7E-Vry"/>
+                                        <constraint firstItem="tqD-mW-poS" firstAttribute="leading" secondItem="xMC-Cq-5R0" secondAttribute="leading" constant="8" id="l3F-aJ-2oB"/>
+                                        <constraint firstAttribute="trailing" secondItem="tqD-mW-poS" secondAttribute="trailing" constant="8" id="xgC-bs-AVH"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.10588235294117647" green="0.14901960784313725" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="videoLikes" destination="dxU-XA-wsJ" id="r1E-AQ-7Jv"/>
+                                    <outlet property="videoThumbnail" destination="tBy-vm-zcO" id="zmE-jW-22u"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -181,8 +261,9 @@
                         </connections>
                     </tableView>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yg5-fD-oEs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1688.8" y="139.880059970015"/>
+            <point key="canvasLocation" x="1823.2" y="139.880059970015"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="84R-bk-j0v">
@@ -278,5 +359,6 @@
     <resources>
         <image name="Like-48" width="48" height="48"/>
         <image name="login wallpaper" width="4000" height="6000"/>
+        <image name="playbutton" width="166" height="166"/>
     </resources>
 </document>

@@ -18,3 +18,5 @@ class FBPages: NSObject {
     var pictureLink = ""
     
 }
+
+

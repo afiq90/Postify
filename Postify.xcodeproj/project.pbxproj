@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		03C6995D33855E15111EF4A2 /* Pods_Postify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A190F7BE1134EDA22445A7 /* Pods_Postify.framework */; };
 		30E27930F912753CF9473D6D /* Pods_PostifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C241544077F989E771180CF6 /* Pods_PostifyTests.framework */; };
+		4202FAD81F54204500D44DD7 /* servishero_loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 4202FAD71F54204500D44DD7 /* servishero_loading.json */; };
+		4202FADA1F54210800D44DD7 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 4202FAD91F54210800D44DD7 /* loading.json */; };
+		4202FADC1F5421BE00D44DD7 /* AwesomeLottie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4202FADB1F5421BE00D44DD7 /* AwesomeLottie.swift */; };
 		42226AB41F330D2B00CF1265 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42226AB31F330D2B00CF1265 /* MainViewController.swift */; };
 		42268BC31F3423130015C235 /* PagesResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42268BC21F3423130015C235 /* PagesResultCell.xib */; };
 		42268BC51F34239B0015C235 /* PagesResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42268BC41F34239B0015C235 /* PagesResultCell.swift */; };
 		42268BC71F342DEF0015C235 /* FBPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42268BC61F342DEF0015C235 /* FBPages.swift */; };
 		42268BC91F346BB30015C235 /* PagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42268BC81F346BB30015C235 /* PagesViewController.swift */; };
 		424E73ED1F4FC515005A58FF /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424E73EC1F4FC515005A58FF /* MainVC.swift */; };
+		424E73F01F502474005A58FF /* PagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424E73EF1F502474005A58FF /* PagesVC.swift */; };
+		424E73F21F502B12005A58FF /* PagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424E73F11F502B12005A58FF /* PagesCell.swift */; };
+		424E73F41F502C77005A58FF /* PagesVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424E73F31F502C77005A58FF /* PagesVideo.swift */; };
 		42B06B1E1F31C11400AB7A8A /* Facebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B06B1D1F31C11400AB7A8A /* Facebook.swift */; };
 		42B06B211F32FE1000AB7A8A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B06B201F32FE1000AB7A8A /* CardView.swift */; };
 		AD9714821F3025AA00BA70FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9714811F3025AA00BA70FC /* AppDelegate.swift */; };
@@ -50,12 +56,18 @@
 		03A190F7BE1134EDA22445A7 /* Pods_Postify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Postify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		157FCC3E9858AFBB7F75AB28 /* Pods-Postify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Postify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Postify/Pods-Postify.debug.xcconfig"; sourceTree = "<group>"; };
 		3F279C0229843C32A220B5B7 /* Pods-Postify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Postify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Postify/Pods-Postify.release.xcconfig"; sourceTree = "<group>"; };
+		4202FAD71F54204500D44DD7 /* servishero_loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = servishero_loading.json; sourceTree = "<group>"; };
+		4202FAD91F54210800D44DD7 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		4202FADB1F5421BE00D44DD7 /* AwesomeLottie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwesomeLottie.swift; sourceTree = "<group>"; };
 		42226AB31F330D2B00CF1265 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		42268BC21F3423130015C235 /* PagesResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PagesResultCell.xib; sourceTree = "<group>"; };
 		42268BC41F34239B0015C235 /* PagesResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesResultCell.swift; sourceTree = "<group>"; };
 		42268BC61F342DEF0015C235 /* FBPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBPages.swift; sourceTree = "<group>"; };
 		42268BC81F346BB30015C235 /* PagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesViewController.swift; sourceTree = "<group>"; };
 		424E73EC1F4FC515005A58FF /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		424E73EF1F502474005A58FF /* PagesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagesVC.swift; sourceTree = "<group>"; };
+		424E73F11F502B12005A58FF /* PagesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagesCell.swift; sourceTree = "<group>"; };
+		424E73F31F502C77005A58FF /* PagesVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagesVideo.swift; sourceTree = "<group>"; };
 		42B06B1C1F31B52200AB7A8A /* Postify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Postify.entitlements; sourceTree = "<group>"; };
 		42B06B1D1F31C11400AB7A8A /* Facebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facebook.swift; sourceTree = "<group>"; };
 		42B06B201F32FE1000AB7A8A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -108,19 +120,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4202FAD41F541DC000D44DD7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4202FAD91F54210800D44DD7 /* loading.json */,
+				4202FAD71F54204500D44DD7 /* servishero_loading.json */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		42226AB51F33122B00CF1265 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				42B06B1D1F31C11400AB7A8A /* Facebook.swift */,
+				424E73F31F502C77005A58FF /* PagesVideo.swift */,
 				42268BC61F342DEF0015C235 /* FBPages.swift */,
 			);
-			path = Model;
+			name = Model;
+			path = ../Model;
 			sourceTree = "<group>";
 		};
 		42226AB61F33124500CF1265 /* Custom UI */ = {
 			isa = PBXGroup;
 			children = (
+				42226AB51F33122B00CF1265 /* Model */,
 				42B06B201F32FE1000AB7A8A /* CardView.swift */,
+				4202FADB1F5421BE00D44DD7 /* AwesomeLottie.swift */,
 			);
 			path = "Custom UI";
 			sourceTree = "<group>";
@@ -128,6 +153,7 @@
 		424E73EE1F4FCBB0005A58FF /* Testing  */ = {
 			isa = PBXGroup;
 			children = (
+				42268BC81F346BB30015C235 /* PagesViewController.swift */,
 				42226AB31F330D2B00CF1265 /* MainViewController.swift */,
 				42268BC21F3423130015C235 /* PagesResultCell.xib */,
 			);
@@ -177,11 +203,12 @@
 				AD9714831F3025AA00BA70FC /* LoginViewController.swift */,
 				AD9714851F3025AA00BA70FC /* Main.storyboard */,
 				424E73EC1F4FC515005A58FF /* MainVC.swift */,
-				42268BC81F346BB30015C235 /* PagesViewController.swift */,
 				42268BC41F34239B0015C235 /* PagesResultCell.swift */,
+				424E73EF1F502474005A58FF /* PagesVC.swift */,
+				424E73F11F502B12005A58FF /* PagesCell.swift */,
 				424E73EE1F4FCBB0005A58FF /* Testing  */,
 				42226AB61F33124500CF1265 /* Custom UI */,
-				42226AB51F33122B00CF1265 /* Model */,
+				4202FAD41F541DC000D44DD7 /* Resources */,
 				AD97148B1F3025AA00BA70FC /* Assets.xcassets */,
 				AD97148D1F3025AA00BA70FC /* LaunchScreen.storyboard */,
 				AD9714901F3025AA00BA70FC /* Info.plist */,
@@ -338,7 +365,9 @@
 			files = (
 				AD97148F1F3025AA00BA70FC /* LaunchScreen.storyboard in Resources */,
 				AD97148C1F3025AA00BA70FC /* Assets.xcassets in Resources */,
+				4202FADA1F54210800D44DD7 /* loading.json in Resources */,
 				42268BC31F3423130015C235 /* PagesResultCell.xib in Resources */,
+				4202FAD81F54204500D44DD7 /* servishero_loading.json in Resources */,
 				AD9714871F3025AA00BA70FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,11 +533,15 @@
 			files = (
 				42268BC71F342DEF0015C235 /* FBPages.swift in Sources */,
 				424E73ED1F4FC515005A58FF /* MainVC.swift in Sources */,
+				424E73F01F502474005A58FF /* PagesVC.swift in Sources */,
 				AD97148A1F3025AA00BA70FC /* Postify.xcdatamodeld in Sources */,
 				AD9714841F3025AA00BA70FC /* LoginViewController.swift in Sources */,
 				42268BC91F346BB30015C235 /* PagesViewController.swift in Sources */,
+				424E73F21F502B12005A58FF /* PagesCell.swift in Sources */,
+				424E73F41F502C77005A58FF /* PagesVideo.swift in Sources */,
 				42226AB41F330D2B00CF1265 /* MainViewController.swift in Sources */,
 				42268BC51F34239B0015C235 /* PagesResultCell.swift in Sources */,
+				4202FADC1F5421BE00D44DD7 /* AwesomeLottie.swift in Sources */,
 				42B06B1E1F31C11400AB7A8A /* Facebook.swift in Sources */,
 				AD9714821F3025AA00BA70FC /* AppDelegate.swift in Sources */,
 				42B06B211F32FE1000AB7A8A /* CardView.swift in Sources */,
