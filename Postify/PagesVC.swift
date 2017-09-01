@@ -181,7 +181,7 @@ class PagesVC: UITableViewController {
             let videosData = videoInfoArray[indexPath.row]
             let videoSourceURL = videosData.source
             print("video source by row: \(videoSourceURL)")
-//            Facebook.uploadVideoOnFacebook(videoURL: videoSourceURL)
+            Facebook.uploadVideoOnFacebookAsPages(videoURL: videoSourceURL)
             
         }
     }

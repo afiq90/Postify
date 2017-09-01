@@ -20,3 +20,5 @@ Features :
 Custom control : 
 - Download progress bar
 
+
+      //  ** try using graph-video.facebook.com/pageid/videos?title=test,description=testing,file_url=videolink&access_token=askfksjdfkj123123 with alomafire or nsurlsession

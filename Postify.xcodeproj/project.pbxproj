@@ -136,14 +136,12 @@
 				424E73F31F502C77005A58FF /* PagesVideo.swift */,
 				42268BC61F342DEF0015C235 /* FBPages.swift */,
 			);
-			name = Model;
-			path = ../Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		42226AB61F33124500CF1265 /* Custom UI */ = {
 			isa = PBXGroup;
 			children = (
-				42226AB51F33122B00CF1265 /* Model */,
 				42B06B201F32FE1000AB7A8A /* CardView.swift */,
 				4202FADB1F5421BE00D44DD7 /* AwesomeLottie.swift */,
 			);
@@ -206,8 +204,9 @@
 				42268BC41F34239B0015C235 /* PagesResultCell.swift */,
 				424E73EF1F502474005A58FF /* PagesVC.swift */,
 				424E73F11F502B12005A58FF /* PagesCell.swift */,
-				424E73EE1F4FCBB0005A58FF /* Testing  */,
+				42226AB51F33122B00CF1265 /* Model */,
 				42226AB61F33124500CF1265 /* Custom UI */,
+				424E73EE1F4FCBB0005A58FF /* Testing  */,
 				4202FAD41F541DC000D44DD7 /* Resources */,
 				AD97148B1F3025AA00BA70FC /* Assets.xcassets */,
 				AD97148D1F3025AA00BA70FC /* LaunchScreen.storyboard */,
