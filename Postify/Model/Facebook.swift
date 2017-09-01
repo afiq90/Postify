@@ -189,5 +189,22 @@ class Facebook: NSObject {
         }
     }
 
+    class func getFacebookPages(completionBlock: @escaping completionHandler, failure: @escaping failure)  {
+        
+        FBSDKGraphRequest(graphPath: "me/accounts", parameters: ["fields": "access_token,name,id"], httpMethod: "GET").start(completionHandler: { (connection, result, error) in
+            if error != nil {
+                print("error getting the fb page admin data")
+                failure(error)
+            } else {
+                guard let aaa = result as? Dictionary<String, Any> else {return}
+                guard let accountsArray = aaa["data"] as? Array<Any> else {return}
+                for dict in accountsArray {
+                    let accountsDict = dict as! NSDictionary
+                    completionBlock(accountsDict as! Dictionary<String, Any>)
+                }
+            }
+        })
+        
+    }
     
 }

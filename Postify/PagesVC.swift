@@ -155,35 +155,40 @@ class PagesVC: UITableViewController {
 
     @IBAction func repostButton(_ sender: UIButton) {
         
-        //https://stackoverflow.com/questions/43167275/how-can-i-request-facebook-publish-actions-permission-wfrom-my-swift-app
-        if !(FBSDKAccessToken.current().hasGranted("publish_actions")) {
-            
-            print("Request publish_actions permissions")
-            let login: FBSDKLoginManager = FBSDKLoginManager()
-            
-            login.logIn(withPublishPermissions: ["publish_actions"], from: self) { (result, error) in
-                if (error != nil) {
-                    print(error!)
-                } else if (result?.isCancelled)! {
-                    print("Canceled")
-                } else if (result?.grantedPermissions.contains("publish_actions"))! {
-                    print("permissions granted")
-                    
-                }
-            }
-        } else {
-            print("publish actions done")
-            
-            let buttonPosition:CGPoint = sender.convert(CGPoint.zero, to:self.tableView)
-            guard let indexPath = self.tableView.indexPathForRow(at: buttonPosition) else {return}
-            print("indexpath row: \(indexPath.row)")
-
-            let videosData = videoInfoArray[indexPath.row]
-            let videoSourceURL = videosData.source
-            print("video source by row: \(videoSourceURL)")
-            Facebook.uploadVideoOnFacebookAsPages(videoURL: videoSourceURL)
-            
+        Facebook.getFacebookPages(completionBlock: { (pagesDict) in
+            print("pages dict: \(String(describing: pagesDict["name"]!))")
+        }) { (error) in
+            print(error)
         }
+        //https://stackoverflow.com/questions/43167275/how-can-i-request-facebook-publish-actions-permission-wfrom-my-swift-app
+//        if !(FBSDKAccessToken.current().hasGranted("publish_actions")) {
+//            
+//            print("Request publish_actions permissions")
+//            let login: FBSDKLoginManager = FBSDKLoginManager()
+//            
+//            login.logIn(withPublishPermissions: ["publish_actions"], from: self) { (result, error) in
+//                if (error != nil) {
+//                    print(error!)
+//                } else if (result?.isCancelled)! {
+//                    print("Canceled")
+//                } else if (result?.grantedPermissions.contains("publish_actions"))! {
+//                    print("permissions granted")
+//                    
+//                }
+//            }
+//        } else {
+//            print("publish actions done")
+//            
+//            let buttonPosition:CGPoint = sender.convert(CGPoint.zero, to:self.tableView)
+//            guard let indexPath = self.tableView.indexPathForRow(at: buttonPosition) else {return}
+//            print("indexpath row: \(indexPath.row)")
+//
+//            let videosData = videoInfoArray[indexPath.row]
+//            let videoSourceURL = videosData.source
+//            print("video source by row: \(videoSourceURL)")
+//            Facebook.uploadVideoOnFacebookAsPages(videoURL: videoSourceURL)
+//            
+//        }
     }
 
 }
