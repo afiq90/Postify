@@ -28,7 +28,7 @@ class PagesViewController: UIViewController {
 //        }
         
         let videoCountParams = ["fields": "shares,likes.limit(0).summary(true),comments.limit(0).summary(true)"]
-        Facebook.getTotalCountForVideos(params: videoCountParams, postID: "331481044571_1649904411699312", completionBlock: { (result) in
+        FacebookAPI.getTotalCountForVideos(params: videoCountParams, postID: "331481044571_1649904411699312", completionBlock: { (result) in
             print("video total count: \(result)")
         }) { (error) in
             print("hello error")

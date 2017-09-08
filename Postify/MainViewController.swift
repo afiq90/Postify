@@ -30,12 +30,12 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: 0, right: 0)
-        Facebook.getUserInfo(greetingLabel: greetingLabel, profileImage: profilePic)
+        FacebookAPI.getUserInfo(greetingLabel: greetingLabel, profileImage: profilePic)
         
         pages = []
         
         let params = ["fields": "about,name,created_time,picture", "limit": "5"]
-        Facebook.getUserPagesLikes(params: params, handler: { (userData) in
+        FacebookAPI.getUserPagesLikes(params: params, handler: { (userData) in
             
             guard let pagesArrays = userData["data"] as? Array<Any> else {return}
             
@@ -75,7 +75,7 @@ class MainViewController: UIViewController {
         tableView.rowHeight = 80
     
         
-        print("access token: \(Facebook.currentFBAccessToken())")
+        print("access token: \(FacebookAPI.currentFBAccessToken())")
     }
     
     // MARK - Navigation

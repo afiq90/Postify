@@ -12,13 +12,10 @@ Features :
 - Ads by chartboost
 - Use FB analytics
 - News from developer (tiru mematic app)
-- Implement app rate\
+- Implement app rate
 - MBProgresHUD
 
-- get pages total like, use foldingcell
+- get pages total like √
 
 Custom control : 
 - Download progress bar
-
-
-      //  ** try using graph-video.facebook.com/pageid/videos?title=test,description=testing,file_url=videolink&access_token=askfksjdfkj123123 with alomafire or nsurlsession

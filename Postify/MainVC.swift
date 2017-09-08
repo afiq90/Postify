@@ -46,7 +46,7 @@ class MainVC: UITableViewController {
         pages = []
         
         let params = ["fields": "about,created_time,link,name,username,website,fan_count,picture"]
-        Facebook.getUserPagesLikes(params: params, handler: { (userData) in
+        FacebookAPI.getUserPagesLikes(params: params, handler: { (userData) in
             
             guard let pagesArrays = userData["data"] as? Array<Any> else {return}
             

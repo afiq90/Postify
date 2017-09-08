@@ -14,7 +14,7 @@ typealias completionHandler = (Dictionary<String, Any>) -> ()
 typealias failure = (Error?) -> ()
 
 
-class Facebook: NSObject {
+class FacebookAPI: NSObject, FBSDKGraphRequestConnectionDelegate {
     
     class func currentFBAccessToken() -> String {
         let defaults = UserDefaults.standard
@@ -24,7 +24,7 @@ class Facebook: NSObject {
     }
     
     class func getUserInfo(greetingLabel: UILabel, profileImage: UIImageView) {
-    if Facebook.currentFBAccessToken().characters.count > 0  {
+    if FacebookAPI.currentFBAccessToken().characters.count > 0  {
         let params = ["fields": "id,name,email"]
         FBSDKGraphRequest(graphPath: "me", parameters: params).start(completionHandler: { (connection, result, error) in
             if error == nil {
@@ -109,10 +109,9 @@ class Facebook: NSObject {
     }
     
     //https://stackoverflow.com/questions/35611241/share-a-video-to-facebook
-    class func uploadVideoOnFacebookAsPages(videoURL: String) {
+    class func uploadVideoOnFacebookAsPages(videoURL: String, pageName: String) {
         
         // to upload from URL need to use url, if from video library need to use nsdata
-      //  ** try using graph-video.facebook.com/pageid/videos?title=test,description=testing,file_url=videolink&access_token=askfksjdfkj123123 with alomafire or nsurlsession
         
         FBSDKGraphRequest(graphPath: "me/accounts", parameters: ["fields": "access_token,name,id"], httpMethod: "GET").start(completionHandler: { (connection, result, error) in
             if error != nil {
@@ -122,10 +121,13 @@ class Facebook: NSObject {
                 guard let accountsArray = aaa["data"] as? Array<Any> else {return}
                 for dict in accountsArray {
                     let accountsDict = dict as! NSDictionary
-                    if accountsDict["name"] as! String == "ViralMalaysia" {
+                    if accountsDict["name"] as! String == pageName {
                         print("accounts name: \(String(describing: accountsDict["name"]))")
                         let pageAccessToken = accountsDict["access_token"]! as! String
                         print("account token: \(String(describing: pageAccessToken))")
+                        let pageID = accountsDict["id"]! as! String
+                        print("page id: \(String(describing: pageID))")
+
 
                         var pathURL: URL
                         var videoData: Data
@@ -140,7 +142,7 @@ class Facebook: NSObject {
                 
                             //for fb pages need to use page access token, personal acc don't need
                             
-                            FBSDKGraphRequest(graphPath: "368382973321492/videos", parameters: videoObject, tokenString: pageAccessToken, version: nil, httpMethod: "POST").start(completionHandler: { (connection, result, error) in
+                            FBSDKGraphRequest(graphPath: "\(pageID)/videos", parameters: videoObject, tokenString: pageAccessToken, version: nil, httpMethod: "POST").start(completionHandler: { (connection, result, error) in
                                 if error != nil {
                                     NSLog("Error")
                                     
@@ -170,28 +172,38 @@ class Facebook: NSObject {
             videoData = try Data(contentsOf: pathURL)
             print(videoData)
             var strDesc : String
-            strDesc = ""
+            strDesc = "😄🤡😎"
             let videoObject: [String : Any] = ["title": "Testing yoooo", "description": strDesc, "file_url": pathURL]
             //            self.view!.isUserInteractionEnabled = false
             
             //for fb pages need to get page access token, personal acc don't need
-            FBSDKGraphRequest(graphPath: "368382973321492/videos", parameters: videoObject, httpMethod: "POST").start(completionHandler: { (connection, result, error) in
+            
+            let uploadVideoRequest = FBSDKGraphRequest(graphPath: "me/videos", parameters: videoObject, httpMethod: "POST")
+            let connection = FBSDKGraphRequestConnection()
+            connection.timeout = 30
+            connection.delegate = self as! FBSDKGraphRequestConnectionDelegate
+            connection.add(uploadVideoRequest, completionHandler: { (connection, result, error) in
                 if error != nil {
                     NSLog("Error")
-                    
                 }
                 else {
                     NSLog("Success")
                 }
             })
+            connection.start()
+            
         } catch {
             print(error)
         }
     }
 
     class func getFacebookPages(completionBlock: @escaping completionHandler, failure: @escaping failure)  {
-        
-        FBSDKGraphRequest(graphPath: "me/accounts", parameters: ["fields": "access_token,name,id"], httpMethod: "GET").start(completionHandler: { (connection, result, error) in
+       
+        let getAllPagesRequest = FBSDKGraphRequest(graphPath: "me/accounts", parameters: ["fields": "access_token,name,id"], httpMethod: "GET")
+        let connection = FBSDKGraphRequestConnection()
+        connection.timeout = 30
+        connection.delegate = self as! FBSDKGraphRequestConnectionDelegate
+        connection.add(getAllPagesRequest) { (connection, result, error) in
             if error != nil {
                 print("error getting the fb page admin data")
                 failure(error)
@@ -203,8 +215,17 @@ class Facebook: NSObject {
                     completionBlock(accountsDict as! Dictionary<String, Any>)
                 }
             }
-        })
+
+        }
+        connection.start()
         
     }
     
+    func requestConnectionWillBeginLoading(_ connection: FBSDKGraphRequestConnection!) {
+        print("begin uploading video to wall")
+    }
+    
+    func requestConnection(_ connection: FBSDKGraphRequestConnection!, didSendBodyData bytesWritten: Int, totalBytesWritten: Int, totalBytesExpectedToWrite: Int) {
+        print("upload percent reached: " + String(Double(totalBytesWritten) / Double(totalBytesExpectedToWrite)))
+    }
 }

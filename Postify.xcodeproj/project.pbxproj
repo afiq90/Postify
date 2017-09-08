@@ -17,11 +17,12 @@
 		42268BC51F34239B0015C235 /* PagesResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42268BC41F34239B0015C235 /* PagesResultCell.swift */; };
 		42268BC71F342DEF0015C235 /* FBPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42268BC61F342DEF0015C235 /* FBPages.swift */; };
 		42268BC91F346BB30015C235 /* PagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42268BC81F346BB30015C235 /* PagesViewController.swift */; };
+		423A62BB1F62790200AC733B /* PagesAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A62BA1F62790200AC733B /* PagesAccount.swift */; };
 		424E73ED1F4FC515005A58FF /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424E73EC1F4FC515005A58FF /* MainVC.swift */; };
 		424E73F01F502474005A58FF /* PagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424E73EF1F502474005A58FF /* PagesVC.swift */; };
 		424E73F21F502B12005A58FF /* PagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424E73F11F502B12005A58FF /* PagesCell.swift */; };
 		424E73F41F502C77005A58FF /* PagesVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424E73F31F502C77005A58FF /* PagesVideo.swift */; };
-		42B06B1E1F31C11400AB7A8A /* Facebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B06B1D1F31C11400AB7A8A /* Facebook.swift */; };
+		42B06B1E1F31C11400AB7A8A /* FacebookAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B06B1D1F31C11400AB7A8A /* FacebookAPI.swift */; };
 		42B06B211F32FE1000AB7A8A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B06B201F32FE1000AB7A8A /* CardView.swift */; };
 		AD9714821F3025AA00BA70FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9714811F3025AA00BA70FC /* AppDelegate.swift */; };
 		AD9714841F3025AA00BA70FC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9714831F3025AA00BA70FC /* LoginViewController.swift */; };
@@ -64,12 +65,13 @@
 		42268BC41F34239B0015C235 /* PagesResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesResultCell.swift; sourceTree = "<group>"; };
 		42268BC61F342DEF0015C235 /* FBPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBPages.swift; sourceTree = "<group>"; };
 		42268BC81F346BB30015C235 /* PagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesViewController.swift; sourceTree = "<group>"; };
+		423A62BA1F62790200AC733B /* PagesAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagesAccount.swift; sourceTree = "<group>"; };
 		424E73EC1F4FC515005A58FF /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		424E73EF1F502474005A58FF /* PagesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagesVC.swift; sourceTree = "<group>"; };
 		424E73F11F502B12005A58FF /* PagesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagesCell.swift; sourceTree = "<group>"; };
 		424E73F31F502C77005A58FF /* PagesVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagesVideo.swift; sourceTree = "<group>"; };
 		42B06B1C1F31B52200AB7A8A /* Postify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Postify.entitlements; sourceTree = "<group>"; };
-		42B06B1D1F31C11400AB7A8A /* Facebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facebook.swift; sourceTree = "<group>"; };
+		42B06B1D1F31C11400AB7A8A /* FacebookAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAPI.swift; sourceTree = "<group>"; };
 		42B06B201F32FE1000AB7A8A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		66C3DF0FAE7BAF7500EFD18F /* Pods_PostifyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostifyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD97147E1F3025AA00BA70FC /* Postify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Postify.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,9 +134,10 @@
 		42226AB51F33122B00CF1265 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				42B06B1D1F31C11400AB7A8A /* Facebook.swift */,
+				42B06B1D1F31C11400AB7A8A /* FacebookAPI.swift */,
 				424E73F31F502C77005A58FF /* PagesVideo.swift */,
 				42268BC61F342DEF0015C235 /* FBPages.swift */,
+				423A62BA1F62790200AC733B /* PagesAccount.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -541,8 +544,9 @@
 				42226AB41F330D2B00CF1265 /* MainViewController.swift in Sources */,
 				42268BC51F34239B0015C235 /* PagesResultCell.swift in Sources */,
 				4202FADC1F5421BE00D44DD7 /* AwesomeLottie.swift in Sources */,
-				42B06B1E1F31C11400AB7A8A /* Facebook.swift in Sources */,
+				42B06B1E1F31C11400AB7A8A /* FacebookAPI.swift in Sources */,
 				AD9714821F3025AA00BA70FC /* AppDelegate.swift in Sources */,
+				423A62BB1F62790200AC733B /* PagesAccount.swift in Sources */,
 				42B06B211F32FE1000AB7A8A /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
