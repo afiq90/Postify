@@ -2,20 +2,27 @@ Postify based on AFDownloader : inspiration by octosuite
 ------------------------------
 
 Features :
-- List like pages
-- List videos
+- List like pages √
+- List videos √
+- List more videos using next id
 - User can download video
 - User can favourite page - use realm
-- New video from last load
-- User can repost the video into the page
+- Show total count new video from last load (maybe should use delegate)
+- Put a fire icon for post that have more than 3K likes, another icon for below than 3k likes
 - Force update using harpy
 - Ads by chartboost
 - Use FB analytics
 - News from developer (tiru mematic app)
 - Implement app rate
 - MBProgresHUD
+- User can create a niche category (kena main dgn realm)
+- implement textview for video description (https://github.com/iMokhles/CAPostEditorViewController)
+
+DONE LIST: 
 
 - get pages total like √
+- implement picker view for pages for repost function √
+- repost to pages √
 
 Custom control : 
 - Download progress bar

@@ -14,10 +14,12 @@ import CZPicker
 class PagesVC: UITableViewController, FBSDKGraphRequestConnectionDelegate {
   
     var pageIDValue: String = ""
-    var videoInfoArray: [PagesVideo] = []
+    var videoSourceURL: String = ""
+    var videoDescription: String = ""
     var activityView = UIActivityIndicatorView()
     var pickerWithImage: CZPickerView?
     var fruitImages = [UIImage]()
+    var videoInfoArray: [PagesVideo] = []
     var FBPagesAccount: [PagesAccount] = []
     
     override func viewDidAppear(_ animated: Bool) {
@@ -56,8 +58,13 @@ class PagesVC: UITableViewController, FBSDKGraphRequestConnectionDelegate {
         print("page id: \(pageIDValue)")
       
         videoInfoArray = []
+        
+        //no limit video for premium user
+        let params = ["fields": "description,source,thumbnails.limit(1)"]
+        
+        //limit to 10 for standard user
+        //let params = ["fields": "description,source,thumbnails.limit(1)", "limit": "3"]
 
-        let params = ["fields": "description,source,thumbnails.limit(1)", "limit": "3"]
         FacebookAPI.getVideosFromPages(params: params, id: pageIDValue, completionBlock: { (result) in
             
             guard let videoArrays = result["data"] as? Array<Any> else {return}
@@ -151,6 +158,7 @@ class PagesVC: UITableViewController, FBSDKGraphRequestConnectionDelegate {
         let videoImageUrl = URL(string: videosData.videoThumbnail)
         cell.videoThumbnail.sd_setImage(with: videoImageUrl!, placeholderImage: UIImage(named: "placeholder"), options: .continueInBackground, progress: nil
             , completed: nil)
+        cell.pagesDescription.text = videosData.videoDescription
         
         return cell
     }
@@ -175,6 +183,14 @@ class PagesVC: UITableViewController, FBSDKGraphRequestConnectionDelegate {
     }
     
     @IBAction func repostButton(_ sender: UIButton) {
+    
+        //get videoSource URL
+        let buttonPosition:CGPoint = sender.convert(CGPoint.zero, to:self.tableView)
+        guard let indexPath = self.tableView.indexPathForRow(at: buttonPosition) else {return}
+
+        let videosData = videoInfoArray[indexPath.row]
+        videoSourceURL = videosData.source
+        videoDescription = videosData.videoDescription
         
         let picker = CZPickerView(headerTitle: "Pages", cancelButtonTitle: "Cancel", confirmButtonTitle: "Confirm")
         picker?.delegate = self
@@ -247,45 +263,33 @@ extension PagesVC: CZPickerViewDelegate, CZPickerViewDataSource {
     func czpickerView(_ pickerView: CZPickerView!, didConfirmWithItemAtRow row: Int){
         
         let pageName = FBPagesAccount[row].pageName
-        print("pagename: \(pageName)")
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         
-        FacebookAPI.uploadVideoOnFacebookAsPages(videoURL: "https://video.fkul10-1.fna.fbcdn.net/v/t43.1792-2/21328207_1915102218732419_1267842859373953024_n.mp4?efg=eyJybHIiOjE1MDAsInJsYSI6MTAyNCwidmVuY29kZV90YWciOiJzdmVfaGQifQ%3D%3D&rl=1500&vabr=984&oh=71a9082c9d50c19677fa81a7686a347e&oe=59B28271", pageName: pageName)
-        
         // repost function
-        //        //https://stackoverflow.com/questions/43167275/how-can-i-request-facebook-publish-actions-permission-wfrom-my-swift-app
-        //        if !(FBSDKAccessToken.current().hasGranted("publish_actions")) {
-        //
-        //            print("Request publish_actions permissions")
-        //            let login: FBSDKLoginManager = FBSDKLoginManager()
-        //
-        //            login.logIn(withPublishPermissions: ["publish_actions"], from: self) { (result, error) in
-        //                if (error != nil) {
-        //                    print(error!)
-        //                } else if (result?.isCancelled)! {
-        //                    print("Canceled")
-        //                } else if (result?.grantedPermissions.contains("publish_actions"))! {
-        //                    print("permissions granted")
-        //
-        //                }
-        //            }
-        //        } else {
-        //            print("publish actions done")
-        //
-        //            let buttonPosition:CGPoint = sender.convert(CGPoint.zero, to:self.tableView)
-        //            guard let indexPath = self.tableView.indexPathForRow(at: buttonPosition) else {return}
-        //
-        //            let videosData = videoInfoArray[indexPath.row]
-        //            let videoSourceURL = videosData.source
-        //            print("video source by row: \(videoSourceURL)")
-        //
-        ////            DispatchQueue.main.async {
-        ////                FacebookAPI.uploadVideoOnFacebookAsIndividual(videoURL: videoSourceURL)
-        ////            }
-        //            
-        //            uploadVideoToWall(videoSource: videoSourceURL)
-        //        
-        //        }
+        //https://stackoverflow.com/questions/43167275/how-can-i-request-facebook-publish-actions-permission-wfrom-my-swift-app
+        if !(FBSDKAccessToken.current().hasGranted("publish_actions")) {
+
+            print("Request publish_actions permissions")
+            let login: FBSDKLoginManager = FBSDKLoginManager()
+
+            login.logIn(withPublishPermissions: ["publish_actions"], from: self) { (result, error) in
+                if (error != nil) {
+                    print(error!)
+                } else if (result?.isCancelled)! {
+                    print("Canceled")
+                } else if (result?.grantedPermissions.contains("publish_actions"))! {
+                    print("permissions granted")
+
+                }
+            }
+        } else {
+            print("publish actions done")
+
+            FacebookAPI.uploadVideoOnFacebookAsPages(videoURL: self.videoSourceURL, pageName: pageName, description: videoDescription)
+            
+           // uploadVideoToWall(videoSource: videoSourceURL)
+        
+        }
     }
     
     func czpickerViewDidClickCancelButton(_ pickerView: CZPickerView!) {

@@ -109,7 +109,7 @@ class FacebookAPI: NSObject, FBSDKGraphRequestConnectionDelegate {
     }
     
     //https://stackoverflow.com/questions/35611241/share-a-video-to-facebook
-    class func uploadVideoOnFacebookAsPages(videoURL: String, pageName: String) {
+    class func uploadVideoOnFacebookAsPages(videoURL: String, pageName: String, description: String) {
         
         // to upload from URL need to use url, if from video library need to use nsdata
         
@@ -135,9 +135,7 @@ class FacebookAPI: NSObject, FBSDKGraphRequestConnectionDelegate {
                         do {
                             videoData = try Data(contentsOf: pathURL)
                             print(videoData)
-                            var strDesc : String
-                            strDesc = ""
-                            let videoObject: [String : Any] = ["title": "Testing yoooo", "description": strDesc, "file_url": pathURL]
+                            let videoObject: [String : Any] = ["title": "", "description": description, "file_url": pathURL]
                 //            self.view!.isUserInteractionEnabled = false
                 
                             //for fb pages need to use page access token, personal acc don't need
@@ -161,7 +159,7 @@ class FacebookAPI: NSObject, FBSDKGraphRequestConnectionDelegate {
         })
     }
     
-    class func uploadVideoOnFacebookAsIndividual(videoURL: String) {
+    class func uploadVideoOnFacebookAsIndividual(videoURL: String, description: String) {
         
         // to upload from URL need to use url, if from video library need to use nsdata
         
@@ -171,9 +169,7 @@ class FacebookAPI: NSObject, FBSDKGraphRequestConnectionDelegate {
         do {
             videoData = try Data(contentsOf: pathURL)
             print(videoData)
-            var strDesc : String
-            strDesc = "😄🤡😎"
-            let videoObject: [String : Any] = ["title": "Testing yoooo", "description": strDesc, "file_url": pathURL]
+            let videoObject: [String : Any] = ["title": "Testing yoooo", "description": description, "file_url": pathURL]
             //            self.view!.isUserInteractionEnabled = false
             
             //for fb pages need to get page access token, personal acc don't need

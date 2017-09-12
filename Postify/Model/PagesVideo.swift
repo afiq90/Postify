@@ -18,5 +18,6 @@ class PagesVideo: NSObject {
     var videoDateCreated = ""
     var videoThumbnail = ""
     var videoDescription = ""
-    
+    var videoTitle = ""
+    var videoLength: CGFloat = 0.0
 }

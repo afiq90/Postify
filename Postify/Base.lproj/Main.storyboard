@@ -188,14 +188,11 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tqD-mW-poS">
                                             <rect key="frame" x="8" y="22" width="359" height="308.5"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tBy-vm-zcO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="248"/>
-                                                </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSu-2U-RsG">
-                                                    <rect key="frame" x="139" y="84" width="80" height="80"/>
+                                                    <rect key="frame" x="155" y="131" width="48" height="46"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="80" id="Tx2-MZ-Im3"/>
-                                                        <constraint firstAttribute="height" constant="80" id="xLb-ZQ-lAF"/>
+                                                        <constraint firstAttribute="width" constant="48" id="Tx2-MZ-Im3"/>
+                                                        <constraint firstAttribute="height" constant="46" id="xLb-ZQ-lAF"/>
                                                     </constraints>
                                                     <state key="normal" image="playbutton"/>
                                                 </button>
@@ -231,28 +228,42 @@
                                                         <action selector="downloadButton:" destination="QkZ-Mh-zA6" eventType="touchUpInside" id="WRF-GZ-qcF"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bll-sb-8yp">
+                                                    <rect key="frame" x="6" y="-11" width="345" height="70"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" red="0.78874629735946655" green="0.21429780125617981" blue="0.33828425407409668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tBy-vm-zcO">
+                                                    <rect key="frame" x="45" y="67" width="268" height="181"/>
+                                                </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" red="0.32407441735267639" green="0.17640572786331177" blue="0.30443030595779419" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstItem="tBy-vm-zcO" firstAttribute="leading" secondItem="tqD-mW-poS" secondAttribute="leading" id="5AM-1t-sPp"/>
-                                                <constraint firstAttribute="trailing" secondItem="tBy-vm-zcO" secondAttribute="trailing" id="5mh-sP-fgE"/>
-                                                <constraint firstItem="mSu-2U-RsG" firstAttribute="top" secondItem="tBy-vm-zcO" secondAttribute="bottom" constant="-164" id="Kcp-t6-Xsk"/>
-                                                <constraint firstItem="tBy-vm-zcO" firstAttribute="top" secondItem="tqD-mW-poS" secondAttribute="top" id="OOt-IU-CRt"/>
+                                                <constraint firstItem="tBy-vm-zcO" firstAttribute="leading" secondItem="tqD-mW-poS" secondAttribute="leading" constant="45" id="5AM-1t-sPp"/>
+                                                <constraint firstAttribute="trailing" secondItem="tBy-vm-zcO" secondAttribute="trailing" constant="46" id="5mh-sP-fgE"/>
+                                                <constraint firstItem="mSu-2U-RsG" firstAttribute="top" secondItem="tBy-vm-zcO" secondAttribute="bottom" constant="-117" id="Kcp-t6-Xsk"/>
+                                                <constraint firstItem="tBy-vm-zcO" firstAttribute="top" secondItem="tqD-mW-poS" secondAttribute="top" constant="67" id="OOt-IU-CRt"/>
                                                 <constraint firstItem="mSu-2U-RsG" firstAttribute="centerX" secondItem="tqD-mW-poS" secondAttribute="centerX" id="btu-OQ-4Uq"/>
+                                                <constraint firstItem="tBy-vm-zcO" firstAttribute="top" secondItem="bll-sb-8yp" secondAttribute="bottom" constant="8" id="foT-Hd-P0j"/>
                                                 <constraint firstAttribute="bottom" secondItem="tBy-vm-zcO" secondAttribute="bottom" constant="60.5" id="rFh-qG-Jhc"/>
                                             </constraints>
                                         </view>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.35967385769999999" green="0.19134232400000001" blue="0.34011363979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="0.55218237638473511" green="0.37559843063354492" blue="0.54891282320022583" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="bll-sb-8yp" secondAttribute="trailing" constant="8" id="B5n-oY-hhz"/>
+                                        <constraint firstItem="bll-sb-8yp" firstAttribute="leading" secondItem="xMC-Cq-5R0" secondAttribute="leadingMargin" constant="6" id="CoT-Xe-JsA"/>
                                         <constraint firstItem="tqD-mW-poS" firstAttribute="top" secondItem="xMC-Cq-5R0" secondAttribute="top" constant="22" id="cn6-mN-g8t"/>
                                         <constraint firstAttribute="bottom" secondItem="tqD-mW-poS" secondAttribute="bottom" constant="22" id="cqQ-7E-Vry"/>
                                         <constraint firstItem="tqD-mW-poS" firstAttribute="leading" secondItem="xMC-Cq-5R0" secondAttribute="leading" constant="8" id="l3F-aJ-2oB"/>
                                         <constraint firstAttribute="trailing" secondItem="tqD-mW-poS" secondAttribute="trailing" constant="8" id="xgC-bs-AVH"/>
+                                        <constraint firstItem="bll-sb-8yp" firstAttribute="top" secondItem="xMC-Cq-5R0" secondAttribute="topMargin" constant="3" id="xmt-ry-nKj"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.10588235294117647" green="0.14901960784313725" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
+                                    <outlet property="pagesDescription" destination="bll-sb-8yp" id="1ba-Kh-swM"/>
                                     <outlet property="videoLikes" destination="dxU-XA-wsJ" id="r1E-AQ-7Jv"/>
                                     <outlet property="videoThumbnail" destination="tBy-vm-zcO" id="zmE-jW-22u"/>
                                 </connections>

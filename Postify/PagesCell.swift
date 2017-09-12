@@ -12,7 +12,7 @@ class PagesCell: UITableViewCell {
 
     @IBOutlet weak var videoThumbnail: UIImageView!
     @IBOutlet weak var videoLikes: UILabel!
-    
+    @IBOutlet weak var pagesDescription: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
